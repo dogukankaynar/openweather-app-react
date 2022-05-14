@@ -1,10 +1,9 @@
 import React from 'react'
-import { BsFillCloudSunFill } from "react-icons/bs";
-function Card() {
+function Card(props) {
   return (
     <div className="Card">
     <div className="description"><img src="#" /></div>
-    <div className="Main"><span>22'C</span><span>Parçalı Bulutlu</span></div>
+    <div className="Main"><span>{props.temp}'C</span><span>{props.description}</span></div>
     </div>
   )
 }

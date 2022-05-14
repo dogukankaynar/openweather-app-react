@@ -28,7 +28,7 @@ function Search() {
         placeholder="Search City.."
         value={location}
         onChange={(e) => {
-          setLocation(e.target.value);
+          setLocation(e.target.value.trim());
         }}
         onKeyPress={getWeatherData}
       />
