@@ -1,8 +1,11 @@
 import React from 'react'
-
+import { BsFillCloudSunFill } from "react-icons/bs";
 function Card() {
   return (
-    <div>Card</div>
+    <div className="Card">
+    <div className="description"><img src="#" /></div>
+    <div className="Main"><span>22'C</span><span>Parçalı Bulutlu</span></div>
+    </div>
   )
 }
 
