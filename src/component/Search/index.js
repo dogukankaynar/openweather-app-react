@@ -8,6 +8,7 @@ function Search() {
   const [data, setData] = useState({});
   const [temp, setTemp] = useState("");
   const [description, setDescription] = useState("");
+  const [isLoggedIn, setIsLoggedIn] =useState(false);
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=3398852d61ec5408e0e2692ed3888b53&lang=tr`;
 
   const getWeatherData = (e) => {
@@ -18,6 +19,7 @@ function Search() {
         console.log(response.data);
         setTemp(Math.round(response.data.main.temp-273.15));
       });
+      setLocation('');
     }
   };
   return (
@@ -35,6 +37,7 @@ function Search() {
       <Card location={location}
         temp={temp}
         description={description}
+        isLoggedIn={isLoggedIn}
       />
     </div>
   );
