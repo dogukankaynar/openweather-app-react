@@ -20,7 +20,7 @@ code {
 }
 .Header{
   height:1em;
-  background-color:#AED6F1;
+  background-color:#B764DA;
   width:100%;
   text-align:center;
   color:white;
@@ -42,19 +42,29 @@ code {
 .Card{
   margin-top:2em;
   height:15em;
-  width:20em;
+  max-width:25em;
+  min-width:25em;
   display: flex;
   justify-content: center;
   align-items:center;
   border:1px solid #ccc;
-  background-color:#F5EEF8  ;
+  background-color:#AED6F1  ;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   gap:2em;
-}
-img{
-  width:100px;
+  border-radius: 10px;
 }
 .Main{
   display: flex;
   flex-direction: column;
+  max-width: 15em;
+  min-width: 15em;
+}
+.img{
+  width: 100px;
+  height: 100px;
+  /* background-image: url("../img/yağmurlu.png"); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:100px;
+
 }

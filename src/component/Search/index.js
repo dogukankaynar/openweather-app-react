@@ -8,8 +8,8 @@ function Search() {
   const [data, setData] = useState({});
   const [temp, setTemp] = useState("");
   const [description, setDescription] = useState("");
-  const [isLoggedIn, setIsLoggedIn] =useState(false);
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=3398852d61ec5408e0e2692ed3888b53&lang=tr`;
+
 
   const getWeatherData = (e) => {
     if (e.key === "Enter") {
@@ -30,14 +30,13 @@ function Search() {
         placeholder="Search City.."
         value={location}
         onChange={(e) => {
-          setLocation(e.target.value.trim());
+          setLocation(e.target.value);
         }}
         onKeyPress={getWeatherData}
       />
       <Card location={location}
         temp={temp}
         description={description}
-        isLoggedIn={isLoggedIn}
       />
     </div>
   );
